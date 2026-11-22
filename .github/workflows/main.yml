@@ -25,10 +25,9 @@ jobs:
 
       - name: Build APK
         run: gradle assembleDebug --no-daemon
-        working-directory: PhotoEditor-Android
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: PhotoEditor-apk
-          path: PhotoEditor-Android/app/build/outputs/apk/debug/app-debug.apk
+          path: app/build/outputs/apk/debug/app-debug.apk
